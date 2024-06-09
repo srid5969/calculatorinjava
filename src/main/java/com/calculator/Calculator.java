@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class Calculator extends StringCalculator {
     private final Scanner scanner;
-        private static final Logger logger = Logger.getLogger(StringCalculator.class.getName());
+    
+    private static final Logger logger = Logger.getLogger(StringCalculator.class.getName());
 
     public Calculator() {
         this.scanner = new Scanner(System.in);
