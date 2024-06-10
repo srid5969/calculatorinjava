@@ -1,25 +1,13 @@
 
 package com.calculator;
-
 import java.util.logging.Logger;
-
 import java.util.Scanner;
 
-public class Calculator extends StringCalculator {
-    private final Scanner scanner;
-    
-    private static final Logger logger = Logger.getLogger(StringCalculator.class.getName());
-
-    public Calculator() {
-        this.scanner = new Scanner(System.in);
-    }
-
-    public void closeScanner() {
-        scanner.close();
-    }
+public class Calculator extends StringCalculator {    
+    private static final Logger logger = Logger.getLogger("Calculator");
 
     public static void main(String[] args) {
-        StringCalculator calculator = new StringCalculator();
+        Calculator calculator = new Calculator();
         Scanner inputScanner = new Scanner(System.in);
 
         logger.info("Choose operation:");
