@@ -5,37 +5,37 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringCalculatorTest {
 
     @Test
-    void testAddEmptyStringReturnsZero() {
+    void canAddEmptyStringReturnsZero() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
 
     @Test
-    void testAddSingleNumberReturnsNumber() {
+    void canAddSingleNumberReturnsNumber() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(1, calculator.add("1"));
     }
 
     @Test
-    void testAddTwoNumbersReturnsSum() {
+    void canAddTwoNumbersReturnsSum() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(6, calculator.add("1,5"));
     }
 
     @Test
-    void testAddNewLineDelimiterReturnsSum() {
+    void canAddNewLineDelimiterReturnsSum() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(6, calculator.add("1\n2,3"));
     }
 
     @Test
-    void testAddCustomDelimiterReturnsSum() {
+    void canAddCustomDelimiterReturnsSum() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(3, calculator.add("//;\n1;2"));
     }
 
     @Test
-    void testAddNegativeNumbersThrowsException() {
+    void canAddNegativeNumbersThrowsException() {
         StringCalculator calculator = new StringCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             calculator.add("1,-2,3,-4");
@@ -43,37 +43,37 @@ class StringCalculatorTest {
     }
 
     @Test
-    void testSubtractEmptyStringReturnsZero() {
+    void canSubtractEmptyStringReturnsZero() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.subtract(""));
     }
 
     @Test
-    void testSubtractSingleNumberReturnsNumber() {
+    void canSubtractSingleNumberReturnsNumber() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(1, calculator.subtract("1"));
     }
 
     @Test
-    void testSubtractTwoNumbersReturnsDifference() {
+    void canSubtractTwoNumbersReturnsDifference() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(-4, calculator.subtract("1,5"));
     }
 
     @Test
-    void testSubtractNewLineDelimiterReturnsDifference() {
+    void canSubtractNewLineDelimiterReturnsDifference() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(-4, calculator.subtract("1\n2,3"));
     }
 
     @Test
-    void testSubtractCustomDelimiterReturnsDifference() {
+    void canSubtractCustomDelimiterReturnsDifference() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(-1, calculator.subtract("//;\n1;2"));
     }
 
     @Test
-    void testSubtractNegativeNumbersThrowsException() {
+    void canSubtractNegativeNumbersThrowsException() {
         StringCalculator calculator = new StringCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             calculator.subtract("1,-2,3,-4");
@@ -81,31 +81,31 @@ class StringCalculatorTest {
     }
 
     @Test
-    void testDivideEmptyStringReturnsZero() {
+    void canDivideEmptyStringReturnsZero() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0.0, calculator.divide(""));
     }
 
     @Test
-    void testDivideSingleNumberReturnsNumber() {
+    void canDivideSingleNumberReturnsNumber() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(1.0, calculator.divide("1"));
     }
 
     @Test
-    void testDivideTwoNumbersReturnsQuotient() {
+    void canDivideTwoNumbersReturnsQuotient() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(2.5, calculator.divide("5,2"));
     }
 
     @Test
-    void testDivideCustomDelimiterReturnsQuotient() {
+    void canDivideCustomDelimiterReturnsQuotient() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0.5, calculator.divide("//;\n1;2"));
     }
 
     @Test
-    void testDivideDivisionByZeroThrowsException() {
+    void canDivideDivisionByZeroThrowsException() {
         StringCalculator calculator = new StringCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             calculator.divide("1,0,3");
@@ -113,31 +113,31 @@ class StringCalculatorTest {
     }
 
     @Test
-    void testMultiplyEmptyStringReturnsOne() {
+    void canMultiplyEmptyStringReturnsOne() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(1, calculator.multiply(""));
     }
 
     @Test
-    void testMultiplySingleNumberReturnsNumber() {
+    void canMultiplySingleNumberReturnsNumber() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(5, calculator.multiply("5"));
     }
 
     @Test
-    void testMultiplyTwoNumbersReturnsProduct() {
+    void canMultiplyTwoNumbersReturnsProduct() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(15, calculator.multiply("3,5"));
     }
 
     @Test
-    void testMultiplyCustomDelimiterReturnsProduct() {
+    void canMultiplyCustomDelimiterReturnsProduct() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(6, calculator.multiply("//;\n2;3"));
     }
 
     @Test
-    void testMultiplyNegativeNumbersThrowsException() {
+    void canMultiplyNegativeNumbersThrowsException() {
         StringCalculator calculator = new StringCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             calculator.multiply("1,-2,3,-4");

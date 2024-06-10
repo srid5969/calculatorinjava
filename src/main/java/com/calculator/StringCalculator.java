@@ -2,6 +2,10 @@ package com.calculator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The StringCalculator class provides methods to perform mathematical operations on a string of numbers.
+ * It supports addition, subtraction, multiplication, and division operations.
+ */
 public class StringCalculator {
 
     private String extractDelimiter(String numbers) {
