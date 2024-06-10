@@ -12,7 +12,7 @@ public class StringCalculator {
         String delimiter = ",";
         if (numbers.startsWith("//")) {
             String[] parts = numbers.split("\n", 2);
-            delimiter = parts[0].substring(2);
+            delimiter = parts[1].substring(2);
         }
         return delimiter;
     }
