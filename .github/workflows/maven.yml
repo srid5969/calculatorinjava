@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Test Using Maven
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       # Run tests
-      - name: Run tests with Maven
+      - name: Run test cases with Maven
         run: mvn test
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
