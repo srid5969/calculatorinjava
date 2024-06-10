@@ -10,34 +10,38 @@ public class Calculator extends StringCalculator {
         Calculator calculator = new Calculator();
         Scanner inputScanner = new Scanner(System.in);
 
-        logger.info("Choose operation:");
-        logger.info("1. Addition");
-        logger.info("2. Multiplication");
-        logger.info("3. Division");
-        logger.info("Enter your choice (1, 2, or 3): ");
+        log("Choose operation:");
+        log("1. Addition");
+        log("2. Multiplication");
+        log("3. Division");
+        log("Enter your choice (1, 2, or 3): ");
         int choice = inputScanner.nextInt();
         inputScanner.nextLine(); // Consume newline
 
-        logger.info("Enter numbers separated by commas (e.g., 1,2,3): ");
+        log("Enter numbers separated by commas (e.g., 1,2,3): ");
         String input = inputScanner.nextLine();
 
         switch (choice) {
             case 1:
                 int sum = calculator.add(input);
-                logger.info("Sum: " + sum);
+                log("Sum: " + sum);
                 break;
             case 2:
                 int product = calculator.multiply(input);
-                logger.info("Product: " + product);
+                log("Product: " + product);
                 break;
             case 3:
                 double quotient = calculator.divide(input);
-                logger.info("Quotient: " + quotient);
+                log("Quotient: " + quotient);
                 break;
             default:
-                logger.info("Invalid choice.");
+                log("Invalid choice.");
         }
 
         inputScanner.close();
+    }
+
+    private static void log(String message) {
+        System.out.println(message);
     }
 }
